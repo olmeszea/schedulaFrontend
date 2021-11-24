@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Empresa</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let empresa of empresas; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{empresa.nombre_empresa}}</td>
+        <td>{{empresa.ciudad_empresa}}</td>
+        <td>{{empresa.direccion_empresa}}</td>
+        <td>{{empresa.telefono_empresa}}</td>
+        <td>{{empresa.email_empresa}}</td>
+        <td>{{empresa.categoria_empresa}}</td>
+        <td>{{empresa.status_empresa}}</td>
+        <td>{{empresa.id_empresa}}</td>
+
+        <td><button type="button" class="btn btn=danger" (click)="eliminarEmpresa(empresa.id_empresa)">Eliminar</button> </td>
+      </tr>
+    
+    </tbody>
+
+    <button type="button" class="btn btn-warning">Agregar</button>
+
+  </table>
+  
