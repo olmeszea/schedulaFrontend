@@ -1,0 +1,19 @@
+<div class="contenedor">
+    <h1>{{empresaActualizar ? 'Actualizar empresa : 'Agregar empresa'}}</h1>
+    <form [formGroup]="formGroup">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombre*</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="nombre_empresa">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Ciudad*</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" formControlName="ciudad_empresa">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Direccion*</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" formControlName="direccion_empresa">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid" (click)="agregarEmpresa()" *ngIf="!empresaActualizar">Agregar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid" (click)="actualizarEmpresa()" *ngIf="empresaActualizar">Actualizar</button>
+      </form>
+</div>

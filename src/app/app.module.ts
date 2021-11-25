@@ -12,6 +12,8 @@ import { EmpresasComponent } from './components/empresas/empresas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmpresasService } from './services/empresas/empresas.service';
 import { ErrorComponent } from './components/error/error.component';
+import { FormularioEmpresaComponent } from './components/formulario-empresa/formulario-empresa.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,15 @@ import { ErrorComponent } from './components/error/error.component';
     NotfoundComponent,
     UsuariosComponent,
     EmpresasComponent,
-    ErrorComponent
-    //EmpresaComponent
+    ErrorComponent,
+    FormularioEmpresaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule  //al crear un servicio del modulo HttpClient, se debe importar
+    HttpClientModule,  //al crear un servicio del modulo HttpClient, se debe importar
                         //el modulo HttpClientModule de forma manual.  
+    ReactiveFormsModule
   ],
   providers: [EmpresasService], //al inyectar el servicio, debemos agregar la solicitud aqui
   bootstrap: [AppComponent]
