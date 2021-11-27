@@ -1,18 +1,48 @@
 <div class="contenedor">
-    <h1>{{empresaActualizar ? 'Actualizar empresa : 'Agregar empresa'}}</h1>
+    <h1>{{empresaActualizar ? 'Actualizar empresa' : 'Agregar empresa'}}</h1>
     <form [formGroup]="formGroup">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Nombre*</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="nombre_empresa">
+          <label for="inputNombre" class="form-label">Nombre*</label>
+          <input type="text" class="form-control" id="imputNombre" formControlName="nombre_empresa">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Ciudad*</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" formControlName="ciudad_empresa">
+          <label for="inputCiudad" class="form-label">Ciudad*</label>
+          <input type="text" class="form-control" id="inputCiudad" formControlName="ciudad_empresa">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Direccion*</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" formControlName="direccion_empresa">
+          <label for="inputDireccion" class="form-label">Direccion (Ubicación)*</label>
+          <input type="text" class="form-control" id="inputDireccion" formControlName="direccion_empresa">
         </div>
+        <div class="mb-3">
+          <label for="inputTelefono" class="form-label">Teléfono*</label>
+          <input type="text" class="form-control" id="inputTelefono" formControlName="telefono_empresa">
+        </div>
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">E-mail*</label>
+          <input type="text" class="form-control" id="inputEmail" formControlName="email_empresa">
+        </div>
+
+        <div class="col-md-3">
+          <label for="inputCategoria" class="form-label">Categoría*</label>
+          <select class="form-select" id="inputCategoria" formControlName="categoria_empresa">
+            <option selected disabled value="">Choose...</option>
+            <option>Centro de belleza</option>
+            <option>Veterinaria</option>
+            <option>Odontolología</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+
+        <!--
+        <div class="mb-3">
+          <label for="inputCategoria" class="form-label">Categoría*</label>
+          <input type="text" class="form-control" id="inputCategoria" formControlName="categoria_empresa">
+        </div>   
+        -->
+
+
         <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid" (click)="agregarEmpresa()" *ngIf="!empresaActualizar">Agregar</button>
         <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid" (click)="actualizarEmpresa()" *ngIf="empresaActualizar">Actualizar</button>
       </form>

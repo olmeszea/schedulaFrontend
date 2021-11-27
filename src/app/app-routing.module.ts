@@ -5,9 +5,11 @@ import { ErrorComponent } from './components/error/error.component';
 import { FormularioEmpresaComponent } from './components/formulario-empresa/formulario-empresa.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { ConveniosComponent } from './components/convenios/convenios.component';
 
 const routes: Routes = [
   {path: 'empresas', component: EmpresasComponent},
+  {path: 'convenios', component: ConveniosComponent},
   {path: 'formulario-empresa', component: FormularioEmpresaComponent},
   {path: 'error', component: ErrorComponent},
   {path: 'usuarios', component: UsuariosComponent},

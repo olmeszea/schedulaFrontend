@@ -25,17 +25,17 @@ export class EmpresasService {
   public obtenerEmpesa(id: number){}
 
   public agregarEmpresa(empresa: any): Promise<any>{
-    const url = `${environment.apiUrl}/agregarEmpresa`;
+    const url = `${environment.apiUrl}/agregarEmpresas`;
     return this.http.post(url, empresa).toPromise();
   }
 
   public actualizarEmpesa(empresa: EmpresasModel): Promise<any>{
-    const url = `${environment.apiUrl}/actualizarEmpresa/${empresa.id_empresa}`
+    const url = `${environment.apiUrl}/actualizarEmpresas/${empresa.id_empresa}`
     return this.http.put(url, empresa).toPromise();
   }
 
   public eliminarEmpresa(id: number): Promise<any>{
-    return this.http.delete(`${environment.apiUrl}/eliminarEmpresa/${id}`).toPromise();
+    return this.http.delete(`${environment.apiUrl}/eliminarEmpresas/${id}`).toPromise();
   }
 
 }

@@ -29,12 +29,12 @@ export class TablaEmpresasComponent implements OnInit {
       const response =await this.empresasService.obtenerEmpesas();
       return response.datos;
     }catch(error){
-      //this.router.navigate(['/error']);
+      this.router.navigate(['/error']);
       console.log(error);
     }
   }
 
-  public eliminarEmpresa(id:number){
+  public eliminarEmpresa(id: number){
     this.empresasService.eliminarEmpresa(id).then(async response=>{
       if(response.message==='deleted'){
         this.empresas =await this.obtenerEmpresas();
@@ -48,6 +48,7 @@ export class TablaEmpresasComponent implements OnInit {
   public irActualizarEmpresa(empresa: EmpresasModel){
     localStorage.setItem('empresaActualizar', JSON.stringify(empresa));
     this.router.navigate(['/formulario-empresa']);
+    console.log(empresa+" estamos en actualizar empS")
   }
 
 }

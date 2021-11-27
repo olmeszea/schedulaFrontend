@@ -14,6 +14,8 @@ import { EmpresasService } from './services/empresas/empresas.service';
 import { ErrorComponent } from './components/error/error.component';
 import { FormularioEmpresaComponent } from './components/formulario-empresa/formulario-empresa.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConveniosComponent } from './components/convenios/convenios.component';
+import { VerConveniosComponent } from './components/ver-convenios/ver-convenios.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     EmpresasComponent,
     ErrorComponent,
     FormularioEmpresaComponent,
+    ConveniosComponent,
+    VerConveniosComponent,
   ],
   imports: [
     BrowserModule,
