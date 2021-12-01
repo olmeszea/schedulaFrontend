@@ -19,11 +19,11 @@
         <td>{{empresa.telefono_empresa}}</td>
         <td>{{empresa.email_empresa}}</td>
         <td>{{empresa.categoria_empresa}}</td>
-        <!--  <td>{{empresa.status_empresa}}</td>
+        <td>{{empresa.status_empresa}}</td>
         <td>{{empresa.id_empresa}}</td>   -->
 
-        <td><button type="button" class="btn btn=danger" (click)="eliminarEmpresa(empresa.id_empresa)">Eliminar</button> </td>
-        <td><button type="button" class="btn btn-primary" (click)="irActualizarEmpresa(empresa)">Actualizar</button></td>
+        <td><button type="button" class="btn btn-warning" style="background-color: #ffc933fd;" (click)="eliminarEmpresa(empresa.id_empresa)">Eliminar</button> </td>
+        <td><button type="button" class="btn btn-warning" style="background-color: #ff6333fd;" (click)="irActualizarEmpresa(empresa)">Actualizar</button></td>
       </tr>
     </tbody>
   </table>

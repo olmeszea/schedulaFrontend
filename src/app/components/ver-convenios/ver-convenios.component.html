@@ -1,1 +1,25 @@
-<p>ver-convenios works!</p>
+<div class="contenedor">
+  <tr *ngFor ="let convenio of convenios; let i = index">
+  <div class="row">
+      <p>________________________________________________________________________________________________________________</p>
+      <div class="col">
+        <h1>{{convenio.nombre_empresa}}</h1>
+        <h2>{{convenio.direccion_empresa}}</h2>
+        <h2>{{convenio.ciudad_empresa}}</h2>
+        <h2>{{convenio.categoria_empresa}}</h2>
+      </div>
+      <div class="col">
+        <img src="../../../assets/clienteSchedula.png" class="img-thumbnail" alt="...">
+      </div>
+      <div class="col">
+        <td><button type="button" class="btn btn-warning" style="background-color: #ecf021bb;">Agendar</button></td>
+      </div>
+      
+  </div>
+
+  </tr>
+
+</div>
+  
+
+
