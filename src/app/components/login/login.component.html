@@ -1,0 +1,28 @@
+<body>
+    <!--Encabezado-->
+    <header>
+        <app-header-simple></app-header-simple> <!--Selector del componente header-simple-->
+    </header>
+
+    <!--Formulario-->
+    <div class="contenedor">
+
+        <h2>Te damos la bienvenida a Schedula</h2>
+
+        <form [formGroup]="formaUsuarios">
+    
+            <div class="elemento">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required="true" formControlName="email"/>
+            </div>
+    
+            <div class="elemento">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required="true" formControlName="password"/>
+            </div>
+
+            <div class="elemento">
+                <button type="submit" [disabled]="formaUsuarios.invalid" (click)="pruebaVerConvenios()">INICIAR SESION</button>
+            </div>
+    
+        </form>
+    </div>
+</body>

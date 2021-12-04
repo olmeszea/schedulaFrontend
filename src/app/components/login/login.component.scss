@@ -1,0 +1,52 @@
+body{
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    background: #FDC85E;
+    height: 100%; //Abarque todo el ancho
+}
+
+.contenedor{
+    margin: 100px auto;
+    width: 500px;
+    padding: 30px;
+    text-align: center;
+}
+
+.contenedor h2{
+    margin: 50px 0 30px;
+    padding: 0;
+    font-family: 'Playfair Display';
+    font-size: 30px;
+    color: #D62828;
+    text-align: center;
+}
+
+.contenedor .elemento input{
+    width: 50%;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    border: none;
+    text-indent: 10px;
+}
+
+.contenedor .elemento button[type="submit"]{
+    background-color: #D62828;
+    border: none;
+    padding: 15px;
+    width: 30%;
+    cursor: pointer; //Al ubicar mouse encima, se ve una manita
+    color: #fff;
+    margin-top: 10px;
+}
+
+.contenedor .elemento button:disabled{
+    background-color: #003049;
+    cursor:auto;
+}
+
+.contenedor .elemento ::-webkit-input-placeholder{
+    padding-left: 5px;
+}

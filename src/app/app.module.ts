@@ -16,6 +16,12 @@ import { FormularioEmpresaComponent } from './components/formulario-empresa/form
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConveniosComponent } from './components/convenios/convenios.component';
 import { VerConveniosComponent } from './components/ver-convenios/ver-convenios.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { UsuariosService } from './services/usuarios.service';
+import { HeaderSimpleComponent } from './components/header-simple/header-simple.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +36,10 @@ import { VerConveniosComponent } from './components/ver-convenios/ver-convenios.
     FormularioEmpresaComponent,
     ConveniosComponent,
     VerConveniosComponent,
+    InicioComponent,
+    LoginComponent,
+    RegistroComponent,
+    HeaderSimpleComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +48,7 @@ import { VerConveniosComponent } from './components/ver-convenios/ver-convenios.
                         //el modulo HttpClientModule de forma manual.  
     ReactiveFormsModule
   ],
-  providers: [EmpresasService], //al inyectar el servicio, debemos agregar la solicitud aqui
-  bootstrap: [AppComponent]
+  providers: [EmpresasService, UsuariosService], //al inyectar el servicio, debemos agregar la solicitud aqui
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

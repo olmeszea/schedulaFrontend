@@ -1,0 +1,53 @@
+<body>
+    <!--Encabezado-->
+    <header>
+        <app-header-simple></app-header-simple> <!--Selector del componente header-simple-->
+    </header>
+
+    <!--Formulario-->
+    <div class="contenedor">
+
+        <h2>Te damos la bienvenida a Schedula</h2>
+
+        <form [formGroup]="formUsuarios">
+
+            <div class="elemento">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required="true" formControlName="nombre"/>
+            </div>
+            
+            <div class="elemento">
+                <input type="text" id="apellido" name="apelllido" placeholder="Apellido" required="true" formControlName="apellido"/>
+            </div>
+            
+            <div class="elemento">
+                <input type="text" id="correo" name="correo" placeholder="Teléfono" required="true" formControlName="telefono"/>
+            </div>
+    
+            <div class="elemento">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required="true" formControlName="email"/>
+            </div>
+    
+            <div class="elemento">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required="true" formControlName="password"/>
+            </div>
+    
+            <div class="elemento">
+                <select id="tipoIdentificacion" name="tipoIdentificacion" required="true" formControlName="tipo">
+                    <option value="" selected disabled hidden>Tipo documento</option>
+                    <option value="Cédula ciudadanía">Cédula de ciudadanía</option>
+                    <option value="Cédula extranjería">Cédula de extranjería</option>
+                    <option value="Tarjeta identidad">Tarjeta de identidad</option>
+                </select>
+            </div>
+     
+            <div class="elemento">
+                <input type="text" id="identificacion" name="identificacion" placeholder="Número documento" required="true" formControlName="identificacion"/>
+            </div>
+
+            <div class="elemento">
+                <button type="submit" [disabled]="formUsuarios.invalid" (click)="agregarUsuario()">REGISTRARSE</button>
+            </div>
+    
+        </form>
+    </div>
+</body>

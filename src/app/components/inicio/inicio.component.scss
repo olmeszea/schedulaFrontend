@@ -1,0 +1,82 @@
+html{
+    font-family: 'Playfair Display';
+}
+
+//ENCABEZADO
+.contenedor{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #D62828;
+    height: 70px;
+}
+
+.contenedor ul{
+    list-style-type: none; //Quitar las viñetas
+    overflow: hidden;
+    padding: 0 20px 0;
+    margin-top: 5px;
+}
+
+.contenedor li a{
+    display: block;
+    color: #FCF1F1;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contenedor li a:hover{
+    background-color: #FCF1F1;
+    color: #D62828;
+}
+
+//DESPUES DE ENCABEZADO
+
+.subtitulo1{
+    margin-top: 100px;
+    background-color: #FDC85E;
+    height: 40px;
+    width: 100%;
+}
+
+.subtitulo1 h2{
+    padding-left: 40px;
+    padding-top: 3px;
+    font-size: 50;
+}
+
+.imagenes{
+   margin-top: 50px;
+   margin-left: 200px;
+}
+
+.imagenes img{
+    width: 300px;
+    height: 250px;
+    object-fit:cover;
+}
+
+.titulos p{
+    display: inline-block;
+    top: 450px;
+    width: 300px;
+    text-align:center;
+    vertical-align: top;
+}
+
+
+.subtitulo2{
+    margin-top: 50px;
+    background-color: #FDC85E;
+    height: 40px;
+    width: 100%;
+}
+
+.subtitulo2 h2{
+    padding-top: 3px;
+    text-align: center;
+    font-size: 50;
+}
