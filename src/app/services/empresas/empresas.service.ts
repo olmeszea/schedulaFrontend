@@ -18,18 +18,18 @@ export class EmpresasService {
 
   constructor(private http: HttpClient) { }
 
-  public obtenerEmpesas(): Promise<any>{
+  public obtenerEmpresas(): Promise<any>{
     const url=`${environment.apiUrl}/obtenerEmpresas`;
     return this.http.get(url).toPromise();
   }
-  public obtenerEmpesa(id: number){}
+  public obtenerEmpresa(id: number){}
 
   public agregarEmpresa(empresa: any): Promise<any>{
     const url = `${environment.apiUrl}/agregarEmpresas`;
     return this.http.post(url, empresa).toPromise();
   }
 
-  public actualizarEmpesa(empresa: EmpresasModel): Promise<any>{
+  public actualizarEmpresa(empresa: EmpresasModel): Promise<any>{
     const url = `${environment.apiUrl}/actualizarEmpresas/${empresa.id_empresa}`
     return this.http.put(url, empresa).toPromise();
   }
