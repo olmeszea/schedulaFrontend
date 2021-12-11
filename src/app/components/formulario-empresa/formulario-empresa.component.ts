@@ -71,7 +71,7 @@ export class FormularioEmpresaComponent implements OnInit {
       ...this.formGroup.value
     }
     console.log(empresa);
-    this.empresasService.actualizarEmpesa(empresa).then(response =>{
+    this.empresasService.actualizarEmpresa(empresa).then(response =>{
       if (response.message === 'updated'){
         alert('Empresa actualizada correctamente');
         this.router.navigate(['/empresas']);

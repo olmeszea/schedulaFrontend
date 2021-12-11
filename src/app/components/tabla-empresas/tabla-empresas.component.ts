@@ -26,7 +26,7 @@ export class TablaEmpresasComponent implements OnInit {
 
   public async obtenerEmpresas(): Promise<any>{
     try{
-      const response =await this.empresasService.obtenerEmpesas();
+      const response =await this.empresasService.obtenerEmpresas();
       return response.datos;
     }catch(error){
       this.router.navigate(['/error']);
