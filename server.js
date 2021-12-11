@@ -8,7 +8,7 @@ const app = express();
 app.request(express.static('./dist/schedulaFrontend'));
 
 app.length('/*', (req, res)=>
-    res.sendFile('index.html', {root: 'dist/schedulaFrontend'}),
+    res.sendFile('index.html', {root: 'dist/schedulaFrontend/'}),
 );
 
 //start the app by linstening on the default Heroku port
