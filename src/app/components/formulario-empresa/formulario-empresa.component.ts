@@ -43,7 +43,7 @@ export class FormularioEmpresaComponent implements OnInit {
     //(xx)...Para agregar una empresa se debe agregar el dato de id_usuario (clave foranea)
     //de la tabla usuarios_empresa. Se debe incluir ese dato al resultado de "value"
     console.log(this.formGroup.value);
-    console.log(this.formGroup.value + " antes de partir");
+    console.log(this.formGroup.value);
     //IMPORTANTE:  El dato "id_usuario" se agrega manualmente. Se debe modificar este pnto
     //cuando se unifique la aplicacion con la tabla de usuarios, y se pueda realizar la 
     //debida consulta para agregar el usuario.  La parte de status es una caracteristica que
@@ -53,7 +53,7 @@ export class FormularioEmpresaComponent implements OnInit {
       status_empresa: 'Activo',
       ...this.formGroup.value,
     }
-    console.log(this.formGroup.value + "en la llegada");
+    console.log(this.formGroup.value);
     this.empresasService.agregarEmpresa(empresaModif).then(response=>{
       alert('Empresa creada correctamente');
       this.router.navigate(['/empresas']);
